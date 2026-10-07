@@ -1,0 +1,80 @@
+{
+    "project_name": "DeepCSAT: E-Commerce Customer Satisfaction Score Prediction",
+    "selected_model": "Tuned ANN",
+    "target_name": "csat_score",
+    "target_mapping": {
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 5
+    },
+    "model_features": [
+        "log_item_price",
+        "log_response_time_minutes",
+        "log_order_to_issue_hours",
+        "issue_hour",
+        "issue_day_number",
+        "is_weekend",
+        "invalid_response_time",
+        "invalid_order_to_issue_time",
+        "is_order_id_missing",
+        "is_order_date_time_missing",
+        "is_customer_remarks_missing",
+        "is_customer_city_missing",
+        "is_product_category_missing",
+        "is_item_price_missing",
+        "channel_name",
+        "category",
+        "sub_category",
+        "product_category",
+        "supervisor",
+        "manager",
+        "tenure_bucket",
+        "agent_shift",
+        "customer_city",
+        "agent_name"
+    ],
+    "numeric_features_after_frequency_encoding": [
+        "log_item_price",
+        "log_response_time_minutes",
+        "log_order_to_issue_hours",
+        "issue_hour",
+        "issue_day_number",
+        "is_weekend",
+        "invalid_response_time",
+        "invalid_order_to_issue_time",
+        "is_order_id_missing",
+        "is_order_date_time_missing",
+        "is_customer_remarks_missing",
+        "is_customer_city_missing",
+        "is_product_category_missing",
+        "is_item_price_missing",
+        "customer_city_frequency",
+        "agent_name_frequency"
+    ],
+    "low_cardinality_features": [
+        "channel_name",
+        "category",
+        "sub_category",
+        "product_category",
+        "supervisor",
+        "manager",
+        "tenure_bucket",
+        "agent_shift"
+    ],
+    "high_cardinality_features": [
+        "customer_city",
+        "agent_name"
+    ],
+    "processed_feature_count": 153,
+    "test_metrics": {
+        "Accuracy": 0.688635366388767,
+        "Macro Precision": 0.23545500955920895,
+        "Macro Recall": 0.23928550552311764,
+        "Macro F1": 0.2192638768121579,
+        "Weighted F1": 0.6194545057915158,
+        "MAE": 0.7940324703817464,
+        "Quadratic Weighted Kappa": 0.18827393746701304
+    }
+}
